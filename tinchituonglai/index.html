@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tín Chỉ Tương Lai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>Tín Chỉ Tương Lai</h1>
+            <p>Phụng sự cộng đồng - Kiến tạo tương lai</p>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="#overview">Giới Thiệu</a></li>
+                <li><a href="#services">Dịch Vụ</a></li>
+                <li><a href="#team">Đội Ngũ</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <h2>Tổng Quan Dự Án</h2>
+        <div class="overview-content">
+            <img src="assets/img/biochar_overview.jpg" alt="Ảnh minh họa dự án Tín Chỉ Tương Lai">
+            <p>Dự án “Tín Chỉ Tương Lai” cung cấp tín chỉ carbon biochar giúp Việt Nam đạt mục tiêu phát triển bền vững, giảm phát thải khí nhà kính và bảo vệ môi trường.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Dịch Vụ Cung Cấp</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Chuyển đổi rơm rạ thành biochar</h3>
+                <img src="assets/img/biochar_service.jpg" alt="Biochar Service">
+                <p>Giải pháp giảm thiểu phát thải khí CO₂ và cải thiện độ phì nhiêu đất.</p>
+            </div>
+            <div class="service-card">
+                <h3>Công nghệ Blockchain</h3>
+                <img src="assets/img/cardano.png" alt="Blockchain Service">
+                <p>Minh bạch hóa các tín chỉ carbon thông qua hợp đồng thông minh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Đội Ngũ Dự Án</h2>
+        <div class="team-slider">
+            <div class="team-slide">
+                <div class="member">
+                    <img src="assets/img/1.png" alt="Phạm Thùy Dương">
+                    <h3>Phạm Thùy Dương - CEO</h3>
+                    <p>Chịu trách nhiệm chiến lược tổng thể và xây dựng quan hệ đối tác.</p>
+                </div>
+                <div class="member">
+                    <img src="assets/img/2.png" alt="Nguyễn Ngọc Gia Bảo">
+                    <h3>Nguyễn Ngọc Gia Bảo - CPO</h3>
+                    <p>Phát triển hệ thống đo lường tín chỉ ô nhiễm và blockchain.</p>
+                </div>
+                <div class="member">
+                    <img src="assets/img/3.png" alt="Đỗ Nguyên Trà My">
+                    <h3>Đỗ Nguyên Trà My - CMO</h3>
+                    <p>Thực thi chiến lược marketing quảng bá dự án.</p>
+                </div>
+                <div class="member">
+                    <img src="assets/img/4.png" alt="Phạm Đức Mạnh">
+                    <h3>Phạm Đức Mạnh - CHRO</h3>
+                    <p>Quản lý nhân sự, bao gồm tuyển dụng và phát triển nhân tài.</p>
+                </div>
+                <div class="member">
+                    <img src="assets/img/5.png" alt="Phan Thị Hồng Ngọc">
+                    <h3>Phan Thị Hồng Ngọc - CFO</h3>
+                    <p>Quản lý tài chính dự án, lập ngân sách và lập kế hoạch tài chính.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Liên Hệ</h2>
+        <form id="contactForm" action="mailto:dev.bernie@gmail.com" method="post" enctype="text/plain">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Số điện thoại (không bắt buộc):</label>
+            <input type="tel" id="phone" name="phone">
+    
+            <label for="subject">Tiêu đề:</label>
+            <input type="text" id="subject" name="subject" maxlength="256" required>
+    
+            <label for="message">Nội dung:</label>
+            <textarea id="message" name="message"></textarea>
+    
+            <button type="submit">Gửi</button>
+        </form>
+    </section>    
+
+    <script src="script.js"></script>
+</body>
+</html>
