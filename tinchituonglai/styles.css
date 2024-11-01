@@ -138,3 +138,13 @@ h2 {
     color: white;
     cursor: pointer;
 }
+
+.project-contact-info {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.project-contact-info p {
+    margin: 0.5rem 0;
+}
