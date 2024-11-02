@@ -9,26 +9,19 @@ body {
     padding: 0;
 }
 
-/* Các phần tử khác */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent; /* Nền trong suốt, không phân cách */
     padding: 1rem 2rem;
+    background: transparent;
 }
 
 .header-left {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Căn giữa logo và văn bản */
+    gap: 10px;
 }
-
-/*.logo-container {
-    position: relative;
-    max-width: 150px; /* Điều chỉnh kích thước của logo
-    height: auto;
-}*/
 
 .logo-container {
     display: flex;
@@ -36,34 +29,29 @@ header {
     gap: 10px; /* Khoảng cách giữa logo và văn bản */
 }
 
-/*.logo {
-    max-width: 150px; /* Điều chỉnh kích thước logo 
-    height: auto;
-    margin-bottom: 0.5rem; /* Khoảng cách giữa logo và slogan 
-    display: block;
-    width: 100%;
-    height: auto;
-}*/
-
 .logo {
     max-width: 50px; /* Điều chỉnh kích thước logo nếu cần */
     height: auto;
 }
 
 .logo-text {
-    font-size: 1.5rem; /* Kích thước chữ cho văn bản bên cạnh logo */
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #066e6f; /* Màu chữ */
+    color: #066e6f;
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
 }
 
 .header-left p {
-    margin: 0.5rem 0 0; /* Khoảng cách giữa logo và slogan */
+    margin: 0;
+    font-size: 0.9rem;
     color: #066e6f;
 }
 
 .header-right ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .header-right ul li {
@@ -71,10 +59,9 @@ header {
 }
 
 .header-right ul li a {
-    color: #066e6f; /* Màu chữ tối hơn trên nền sáng */
+    color: #066e6f;
     text-decoration: none;
     font-weight: bold;
-    font-size: medium;
 }
 
 /* Nội dung các phần */
