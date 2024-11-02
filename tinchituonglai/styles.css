@@ -21,13 +21,44 @@ header {
 .header-left {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Căn giữa logo và slogan */
+    align-items: flex-start;
 }
 
-.logo {
-    max-width: 150px; /* Điều chỉnh kích thước logo */
+/*.logo-container {
+    position: relative;
+    max-width: 150px; /* Điều chỉnh kích thước của logo
     height: auto;
-    margin-bottom: 0.5rem; /* Khoảng cách giữa logo và slogan */
+}*/
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa logo và văn bản */
+}
+
+/*.logo {
+    max-width: 150px; /* Điều chỉnh kích thước logo 
+    height: auto;
+    margin-bottom: 0.5rem; /* Khoảng cách giữa logo và slogan 
+    display: block;
+    width: 100%;
+    height: auto;
+}*/
+
+.logo {
+    max-width: 50px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Kích thước chữ cho văn bản bên cạnh logo */
+    font-weight: bold;
+    color: #066e6f; /* Màu chữ */
+}
+
+.header-left p {
+    margin: 0.5rem 0 0; /* Khoảng cách giữa logo và slogan */
+    color: #066e6f;
 }
 
 .header-right ul {
@@ -43,6 +74,7 @@ header {
     color: #066e6f; /* Màu chữ tối hơn trên nền sáng */
     text-decoration: none;
     font-weight: bold;
+    font-size: medium;
 }
 
 /* Nội dung các phần */
@@ -50,6 +82,31 @@ section {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    color: #333;
+}
+
+/* Căn chỉnh ảnh và văn bản theo hàng ngang */
+.overview-content {
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa ảnh và nội dung văn bản */
+}
+
+.overview-content img {
+    max-width: 300px; /* Điều chỉnh kích thước ảnh nếu cần */
+    height: auto;
+    border-radius: 8px; /* Bo góc ảnh nếu cần */
+}
+
+.text-content {
+    max-width: 600px; /* Đặt độ rộng tối đa cho nội dung văn bản */
+}
+
+#overview h2 {
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+#overview p {
     color: #333;
 }
 
@@ -72,7 +129,7 @@ section {
 
 .service-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
