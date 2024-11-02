@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: whitesmoke; /* Màu văn bản đậm hơn để dễ đọc trên nền sáng */
-    background: #0b6e4f; /* Gradient từ góc trên trái xuống góc dưới phải */
+    color: whitesmoke;
+    background: #0b6e4f;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
@@ -98,6 +98,7 @@ section {
     display: flex;
     align-items: center; /* Căn giữa nội dung theo chiều dọc */
     gap: 20px; /* Khoảng cách giữa ảnh và nội dung văn bản */
+    flex-wrap: wrap; /* Đảm bảo nội dung không bị tràn ra ngoài */
 }
 
 .overview-content img {
@@ -121,6 +122,7 @@ section {
 
 .text-content p {
     font-size: 20px;
+    text-align: justify;
 }
 
 #services h2 {
