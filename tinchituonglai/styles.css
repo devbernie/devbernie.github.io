@@ -1,32 +1,48 @@
-/* Nền gradient cho toàn bộ trang */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: whitesmoke;
-    background: #0b6e4f;
+    color: whitesmoke; /* Màu văn bản đậm hơn để dễ đọc trên nền sáng */
+    background: #0b6e4f; /* Gradient từ góc trên trái xuống góc dưới phải */
     background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
 
+/* Navbar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: transparent;
+    background-color: #073B3A; /* Màu nền navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* Đường kẻ ngăn cách dưới navbar */
+header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #0fb9b1; /* Màu của đường line ngăn cách */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Logo và tên dự án trong navbar */
 .header-left {
     display: flex;
-    align-items: center; /* Căn giữa logo và văn bản */
-    gap: 10px;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa logo và văn bản */
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* Khoảng cách giữa logo và văn bản */
+    gap: 10px;
 }
 
 .logo {
@@ -38,30 +54,35 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: whitesmoke;
-    margin: 0; /* Đảm bảo không có khoảng cách thừa */
+    margin: 0;
 }
 
-.header-left p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #066e6f;
+/* Liên kết navbar */
+.header-right {
+    display: flex;
 }
 
 .header-right ul {
     list-style: none;
     display: flex;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
 
 .header-right ul li {
-    margin-left: 1.5rem;
+    margin: 0;
 }
 
 .header-right ul li a {
     color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+    color: #0fb9b1; /* Màu khi hover */
 }
 
 /* Nội dung các phần */
@@ -179,6 +200,58 @@ section {
 
 .member h3, p {
     color: black;
+}
+
+.vision-mission-core-values {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slide {
+    flex: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: rgba(245, 252, 243, 0.8); /* Nền mờ hơn */
+    border-radius: 10px;
+}
+
+.slide h2 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #666;
 }
 
 #contact h2{
