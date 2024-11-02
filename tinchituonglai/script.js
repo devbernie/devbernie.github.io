@@ -34,3 +34,59 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     alert("Thông tin hợp lệ. Đang gửi...");
 });
+
+// Hiển thị nút khi cuộn xuống 100px
+window.onscroll = function() {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// Hàm cuộn lên đầu trang
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Cuộn mượt
+    });
+}
+
+//new part
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        const slider = document.querySelector('.slider');
+        // Đặt vị trí của slider sao cho hiển thị slide theo index
+        slider.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
+        // Cập nhật các chấm tròn để chỉ có chấm hiện tại là "active"
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    function moveToSlide(index) {
+        showSlide(index);
+    }
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Di chuyển tới slide kế tiếp, quay lại đầu nếu là slide cuối
+        showSlide(currentIndex);
+    }
+
+    // Gán sự kiện click cho từng chấm tròn
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => moveToSlide(index));
+    });
+
+    // Hiển thị slide đầu tiên khi tải trang
+    showSlide(currentIndex);
+
+    // Chạy tự động mỗi 5 giây
+    setInterval(autoSlide, 5000);
+});
