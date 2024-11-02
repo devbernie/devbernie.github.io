@@ -227,11 +227,10 @@ section {
     background-color: #0e7a7b;
 }
 
-/* Nút Scroll to Top */
 #scrollToTopBtn {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 20px; /* Đặt nút ở bên phải */
     width: 50px;
     height: 50px;
     font-size: 24px;
@@ -287,14 +286,72 @@ section {
     color: #333;
 }
 
-/* Project Contact Info */
-.project-contact-info {
-    margin-top: 1.5rem;
-    text-align: center;
-    font-size: 1rem;
+.contact-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Đặt vị trí các nút ở bên trái */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
 }
 
-.project-contact-info p {
-    color: whitesmoke;
-    text-decoration: none;
+.contact-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25d366; /* Màu nền mặc định cho các nút */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.contact-btn img {
+    width: 70%;
+    height: 70%;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+@keyframes ring {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(3deg); }
+    80% { transform: rotate(-3deg); }
+    90% { transform: rotate(2deg); }
+    100% { transform: rotate(0); }
+}
+
+/* Nút gọi điện thoại */
+/* Thêm animation cho nút Phone */
+.phone-btn {
+    background-color: #4CAF50; /* Màu nền cho nút gọi điện */
+    animation: ring 1.5s ease-in-out infinite; /* Hiệu ứng chuông reo */
+}
+
+/* Nút Zalo */
+/* Thêm animation cho nút Zalo */
+.zalo-btn {
+    background-color: #0078FF; /* Màu nền cho nút Zalo */
+    animation: ring 1.5s ease-in-out infinite; /* Hiệu ứng chuông reo */
+}
+
+/* Nút Messenger */
+.messenger-btn {
+    background-color: #0084FF; /* Màu nền cho nút Messenger */
+}
+
+/* Nút Email */
+.email-btn {
+    background-color: #D44638; /* Màu nền cho nút Email */
 }
