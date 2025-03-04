@@ -1,0 +1,432 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: whitesmoke;
+    background: #0b6e4f;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #073B3A; /* Màu nền navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Đường kẻ ngăn cách dưới navbar */
+header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #0fb9b1; /* Màu của đường line ngăn cách */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Logo và tên dự án trong navbar */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa logo và văn bản */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    max-width: 50px; /* Điều chỉnh kích thước logo nếu cần */
+    height: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0;
+}
+
+/* Liên kết navbar */
+.header-right {
+    display: flex;
+}
+
+.header-right ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right ul li {
+    margin: 0;
+}
+
+.header-right ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+    color: #0fb9b1; /* Màu khi hover */
+}
+
+/* Nội dung các phần */
+section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Căn chỉnh ảnh và văn bản theo hàng ngang */
+.overview-content {
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa ảnh và nội dung văn bản */
+    flex-wrap: wrap; /* Đảm bảo nội dung không bị tràn ra ngoài */
+}
+
+.overview-content img {
+    max-width: 300px; /* Điều chỉnh kích thước ảnh nếu cần */
+    height: auto;
+    border-radius: 8px; /* Bo góc ảnh nếu cần */
+}
+
+.text-content {
+    max-width: 600px; /* Đặt độ rộng tối đa cho nội dung văn bản */
+}
+
+#overview h2 {
+    color: whitesmoke; /* Màu tiêu đề trên nền xanh */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+#overview p {
+    color: whitesmoke; /* Màu văn bản trên nền xanh */
+}
+
+.text-content p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#services h2 {
+    color: whitesmoke; /* Màu tiêu đề trên nền xanh nhạt */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Dịch vụ - Card */
+.service-cards {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 70%; /* Điều chỉnh độ rộng của mỗi thẻ dịch vụ */
+    background: #f5fcf3;
+    padding: 0.35rem;
+    border-radius: 10px;
+    max-width: 100%; /* Đảm bảo thẻ không vượt quá chiều rộng */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước thẻ */
+}
+
+.service-card img {
+    width: 90%;
+    height: 90%;
+}
+
+.service-card h3 {
+    color: black;
+}
+
+.service-card p {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+
+#team h2 {
+    color: whitesmoke; /* Màu tiêu đề trên nền xanh nhạt */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Đội ngũ - Slider */
+.team-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.team-slide {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: calc(100% * 5); /* Điều chỉnh theo số lượng thẻ */
+}
+
+.member {
+    min-width: 100%;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgba(245, 252, 243, 0.8); /* Nền mờ hơn */
+    border-radius: 10px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.member h3, p {
+    color: black;
+}
+
+.vision-mission-core-values {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slide {
+    flex: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: rgba(245, 252, 243, 0.8); /* Nền mờ hơn */
+    border-radius: 10px;
+}
+
+.slide h2 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #666;
+}
+
+#contact h2{
+    color: whitesmoke; /* Màu tiêu đề trên nền xanh nhạt */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8); /* Nền mờ để nổi bật */
+    border-radius: 8px;
+}
+
+#contact label {
+    font-weight: bold;
+    color: #ffffff; /* Đặt màu chữ của label thành màu trắng */
+}
+
+#contact input, #contact textarea {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+}
+
+#contact button {
+    background-color: #18A5A7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #0e7a7b;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Đặt nút ở bên phải */
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Form Button - Hình chữ nhật */
+#contact button {
+    background-color: #18A5A7; /* Sử dụng màu teal đậm hơn */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px; /* Bo nhẹ các góc */
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #0e7a7b;
+}
+
+/* Form Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-weight: bold;
+    color: #066e6f;
+}
+
+#contact input, #contact textarea {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Mờ nhẹ cho trường nhập liệu */
+    color: #333;
+}
+
+.contact-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Đặt vị trí các nút ở bên trái */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.contact-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25d366; /* Màu nền mặc định cho các nút */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.contact-btn img {
+    width: 70%;
+    height: 70%;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+@keyframes ring {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(3deg); }
+    80% { transform: rotate(-3deg); }
+    90% { transform: rotate(2deg); }
+    100% { transform: rotate(0); }
+}
+
+/* Nút gọi điện thoại */
+/* Thêm animation cho nút Phone */
+.phone-btn {
+    background-color: #4CAF50; /* Màu nền cho nút gọi điện */
+    animation: ring 1.5s ease-in-out infinite; /* Hiệu ứng chuông reo */
+}
+
+/* Nút Zalo */
+/* Thêm animation cho nút Zalo */
+.zalo-btn {
+    background-color: #0078FF; /* Màu nền cho nút Zalo */
+    animation: ring 1.5s ease-in-out infinite; /* Hiệu ứng chuông reo */
+}
+
+/* Nút Messenger */
+.messenger-btn {
+    background-color: #0084FF; /* Màu nền cho nút Messenger */
+}
+
+/* Nút Email */
+.email-btn {
+    background-color: #D44638; /* Màu nền cho nút Email */
+}
